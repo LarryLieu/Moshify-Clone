@@ -5,7 +5,7 @@
   --color-headings: #1b0760;
   --color-primary: #2584ff;
   --color-secondary: #00d9ff;
-  --color-text: var(--color-text);
+  --color-text: #fff;
 }
 
 *,
@@ -269,4 +269,26 @@ a {
   .input {
     font-size: 1.5rem;
   }
+}
+
+/* Cards */
+.card {
+  border-radius: 7px;
+  box-shadow: 0 0 20px 10px #f3f3f3;
+  overflow: hidden;
+}
+
+.card__header,
+.card__body {
+  padding: 2rem 3rem;
+}
+
+.card--primary .card__header {
+  background: var(--color-primary);
+  color: var(--color-text);
+}
+
+.card--secondary .card__header {
+  background: var(--color-secondary);
+  color: var(--color-text);
 }
