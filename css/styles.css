@@ -1,9 +1,11 @@
 :root {
   --color-accent: #ff3400;
   --color-body: #918ca4;
+  --color-border: #ccc;
   --color-headings: #1b0760;
   --color-primary: #2584ff;
   --color-secondary: #00d9ff;
+  --color-text: var(--color-text);
 }
 
 *,
@@ -101,12 +103,12 @@ a {
 
 .badge--primary {
   background: var(--color-primary);
-  color: #fff;
+  color: var(--color-text);
 }
 
 .badge--secondary {
   background: var(--color-secondary);
-  color: #fff;
+  color: var(--color-text);
 }
 
 .badge--small {
@@ -186,7 +188,7 @@ a {
 
 .btn--primary {
   background: var(--color-primary);
-  color: #fff;
+  color: var(--color-text);
 }
 
 .btn--primary:hover {
@@ -195,7 +197,7 @@ a {
 
 .btn--secondary {
   background: var(--color-secondary);
-  color: #fff;
+  color: var(--color-text);
 }
 
 .btn--secondary:hover {
@@ -204,7 +206,7 @@ a {
 
 .btn--accent {
   background: var(--color-accent);
-  color: #fff;
+  color: var(--color-text);
 }
 
 .btn--accent:hover {
@@ -212,14 +214,14 @@ a {
 }
 
 .btn--outline {
-  background: #fff;
+  background: var(--color-text);
   color: var(--color-headings);
   border: 2px solid var(--color-headings);
 }
 
 .btn--outline:hover {
   background: var(--color-headings);
-  color: #fff;
+  color: var(--color-text);
 }
 
 .btn--block {
@@ -236,7 +238,7 @@ a {
 /* Inputs */
 .input {
   border-radius: 30px;
-  border: 1px solid #ccc;
+  border: 1px solid var(--color-border);
   color: var(--color-headings);
   font-size: 2rem;
   outline: 0;
@@ -245,6 +247,22 @@ a {
 
 ::placeholder {
   color: #cdcbd7;
+}
+
+.input-group {
+  border: 1px solid var(--color-border);
+  border-radius: 30px;
+  display: flex;
+}
+
+.input-group .input {
+  border: 0;
+  flex-grow: 1;
+  padding: 1.5rem 1rem;
+}
+
+.input-group .btn {
+  margin: 4px;
 }
 
 @media screen and (min-width: 1024px) {
