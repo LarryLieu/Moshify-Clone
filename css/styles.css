@@ -6,7 +6,7 @@
   --color-headings: #1b0760;
   --color-primary: #2584ff;
   --color-secondary: #00d9ff;
-  --color-text: #fff;
+  --color-white: #fff;
 }
 
 *,
@@ -104,12 +104,12 @@ a {
 
 .badge--primary {
   background: var(--color-primary);
-  color: var(--color-text);
+  color: var(--color-white);
 }
 
 .badge--secondary {
   background: var(--color-secondary);
-  color: var(--color-text);
+  color: var(--color-white);
 }
 
 .badge--small {
@@ -170,7 +170,7 @@ a {
 }
 
 .icon--white {
-  fill: #fff;
+  fill: var(--color-white);
 }
 
 .icon-container {
@@ -203,7 +203,7 @@ a {
 
 .btn--primary {
   background: var(--color-primary);
-  color: var(--color-text);
+  color: var(--color-white);
 }
 
 .btn--primary:hover {
@@ -212,7 +212,7 @@ a {
 
 .btn--secondary {
   background: var(--color-secondary);
-  color: var(--color-text);
+  color: var(--color-white);
 }
 
 .btn--secondary:hover {
@@ -221,7 +221,7 @@ a {
 
 .btn--accent {
   background: var(--color-accent);
-  color: var(--color-text);
+  color: var(--color-white);
 }
 
 .btn--accent:hover {
@@ -229,14 +229,19 @@ a {
 }
 
 .btn--outline {
-  background: var(--color-text);
+  background: var(--color-white);
   border: 2px solid var(--color-headings);
   color: var(--color-headings);
 }
 
 .btn--outline:hover {
   background: var(--color-headings);
-  color: var(--color-text);
+  color: var(--color-white);
+}
+
+.btn--stretched {
+  padding-left: 6rem;
+  padding-right: 6rem;
 }
 
 .btn--block {
@@ -300,12 +305,12 @@ a {
 
 .card--primary .card__header {
   background: var(--color-primary);
-  color: var(--color-text);
+  color: var(--color-white);
 }
 
 .card--secondary .card__header {
   background: var(--color-secondary);
-  color: var(--color-text);
+  color: var(--color-white);
 }
 
 .card--secondary .badge--secondary {
@@ -314,7 +319,7 @@ a {
 
 /* Plans */
 .plan__name {
-  color: #fff;
+  color: var(--color-white);
   font-size: 2.4rem;
   font-weight: 500;
   margin: 0;
@@ -476,5 +481,45 @@ a {
   }
   .testimonial .quote {
     margin-left: 6rem;
+  }
+}
+
+/* Callouts */
+.callout {
+  padding: 4rem;
+  border-radius: 5px;
+}
+
+.callout--primary {
+  background: var(--color-primary);
+  color: var(--color-white);
+}
+
+.callout__heading {
+  color: var(--color-white);
+  margin-top: 0;
+  font-size: 3rem;
+}
+
+.callout__content {
+  text-align: center;
+}
+
+.callout .btn {
+  justify-self: center;
+  align-self: center;
+}
+
+@media screen and (min-width: 768px) {
+  .callout .grid--1x2 {
+    grid-template-columns: 1fr auto;
+  }
+
+  .callout__content {
+    text-align: left;
+  }
+  .callout .btn {
+    justify-self: start;
+    margin: 2rem;
   }
 }
